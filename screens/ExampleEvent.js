@@ -2,14 +2,16 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, Alert, TouchableOpacity } from 'react-native';
 
 export default function ExampleEvent({ navigation, route }) {
-    // Manejo seguro de parámetros
-    const { nombre } = route?.params || { nombre: "Invitado" };
-    const total = route?.params?.total;
+    const { nombre = "Jesus", total } = route?.params || {};
 
     const handleShowData = () => {
-
-        Alert.alert('🔔 Datos recibidos', `Nombre: ${nombre}`);
-        Alert.alert('🔔 Datos recibidos', `El contador actual es: ${total}`);
+        let mensajeAlert = `Nombre: ${nombre}`;
+        
+        if (total !== undefined) {
+            mensajeAlert += `\nEl contador actual es: ${total}`;
+        }
+        
+        Alert.alert('🔔 Datos recibidos', mensajeAlert);
     };
 
     return (
