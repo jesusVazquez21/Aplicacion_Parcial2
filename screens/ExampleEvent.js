@@ -16,7 +16,7 @@ export default function ExampleEvent({ navigation, route }) {
 
     return (
         <View style={styles.container}>
-            {/* Tarjeta central para darle profundidad y elegancia */}
+            {/* Tarjeta principal*/}
             <View style={styles.card}>
                 
                 <Text style={styles.titulo}>Eventos</Text>
@@ -25,7 +25,7 @@ export default function ExampleEvent({ navigation, route }) {
                     Esta es una pantalla de eventos que tiene como función recibir el contador.
                 </Text>
 
-                {/* Caja resaltada para los datos */}
+                {/* Caja datos */}
                 <View style={styles.infoBox}>
                     <Text style={styles.subtitulo}>
                         Hola, <Text style={styles.highlight}>{nombre}</Text>
@@ -38,18 +38,17 @@ export default function ExampleEvent({ navigation, route }) {
                     )}
                 </View>
 
-                {/* Imagen circular con borde */}
                 <Image 
                     source={require('../assets/cat.gif')}
                     style={styles.imagen} 
                 />
 
-                {/* Botón Principal (Sólido) */}
+                {/* Botón Principal  */}
                 <TouchableOpacity style={styles.botonPrimario} onPress={handleShowData}>
                     <Text style={styles.botonTextoPrimario}>Mostrar datos en el Alert</Text>
                 </TouchableOpacity>
                 
-                {/* Botón Secundario (Con contorno) */}
+                {/* Botón Secundario */}
                 <TouchableOpacity style={styles.botonSecundario} onPress={() => navigation.navigate("Home")}>
                     <Text style={styles.botonTextoSecundario}>Volver al home</Text>
                 </TouchableOpacity>

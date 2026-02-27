@@ -40,7 +40,7 @@ export default function FoodFavScreen({ navigation }) {
                 <Text style={styles.nombreItem}>Milanesa</Text>
             </View>
 
-            {/* Botón para regresar a Sobre Mí */}
+            {/* Botón regresar*/}
             <TouchableOpacity
                 style={styles.botonSecundario} 
                 onPress={() => navigation.navigate("AboutMeScreen")}
@@ -55,13 +55,12 @@ export default function FoodFavScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1, 
-        backgroundColor: '#0f172a', // Fondo oscuro
+        backgroundColor: '#0f172a', 
     },
-    // En el ScrollView, el padding y la alineación se ponen en el contentContainerStyle
     scrollContent: {
         alignItems: 'center',
         padding: 20,
-        paddingBottom: 40, // Espacio extra al final para que el botón no quede pegado abajo
+        paddingBottom: 40, 
     },
     titulo: {
         fontSize: 36,        
@@ -90,7 +89,7 @@ const styles = StyleSheet.create({
     },
     imagen: {
         width: '100%',
-        height: 200,                // Altura fija para que todas las fotos se vean igual
+        height: 200,
         borderRadius: 12,
         marginBottom: 15,
     },

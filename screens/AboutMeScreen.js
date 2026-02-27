@@ -21,7 +21,6 @@ export default function AboutMeScreen({ navigation }) {
                 A continuación, puedes conocer un poco más sobre mis gustos.
             </Text>
 
-            {/* Aquí está la corrección: El texto ahora está dentro de <Text> */}
             <TouchableOpacity style={styles.boton} onPress={() => navigation.navigate("comidasFavoritas")}>
                 <Text style={styles.botonTexto}>Comidas Favoritas</Text>
             </TouchableOpacity>
