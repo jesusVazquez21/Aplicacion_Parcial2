@@ -7,6 +7,8 @@ export default function ExampleEvent({ navigation, route }) {
     const total = route?.params?.total;
 
     const handleShowData = () => {
+
+        Alert.alert('🔔 Datos recibidos', `Nombre: ${nombre}`);
         Alert.alert('🔔 Datos recibidos', `El contador actual es: ${total}`);
     };
 
